@@ -96,7 +96,7 @@ class HassEloverblik:
 
     def get_data_date(self):
         if self._day_data != None:
-            return self._day_data.data_date.date().strftime('%Y-%m-%d')
+            return self._day_data.data_date.date().strftime('%Y-%m-%dT%H:%M:%S.%f%z')
         else:
             return None
 

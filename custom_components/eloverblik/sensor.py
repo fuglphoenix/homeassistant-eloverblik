@@ -19,7 +19,7 @@ async def async_setup_entry(hass, config, async_add_entities):
     sensors.append(EloverblikEnergy("Eloverblik Energy Total", 'total', eloverblik))
     sensors.append(EloverblikEnergy("Eloverblik Energy Total (Year)", 'year_total', eloverblik))
     for x in range(1, 25):
-        sensors.append(EloverblikEnergy(f"Eloverblik Energy {x-1}-{x}", 'hour', eloverblik, x))
+        sensors.append(EloverblikEnergy(f"Eloverblik Energy {x-1:02d}-{x:02d}", 'hour', eloverblik, x))
     sensors.append(EloverblikTariff("Eloverblik Tariff Sum", eloverblik))
     async_add_entities(sensors)
 
