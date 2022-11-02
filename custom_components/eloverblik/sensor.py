@@ -1,5 +1,6 @@
 """Platform for Eloverblik sensor integration."""
 import datetime
+
 import logging
 from homeassistant.const import ENERGY_KILO_WATT_HOUR
 from homeassistant.helpers.entity import Entity
@@ -84,7 +85,7 @@ class EloverblikEnergy(Entity):
 
         if self._sensor_type == 'hour':
             self._state = self._data.get_usage_hour(self._hour)
-            self._data_date = self._data.get_data_date() + timedelta(hours=self._hour, minutes=30)
+            self._data_date = self._data.get_data_date() + datetime.timedelta(hours=self._hour, minutes=30)
         elif self._sensor_type == 'total':
             self._state = self._data.get_total_day()
             self._data_date = self._data.get_data_date()
