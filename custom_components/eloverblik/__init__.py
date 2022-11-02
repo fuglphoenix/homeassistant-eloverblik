@@ -94,13 +94,13 @@ class HassEloverblik:
         else:
             return None
 
-    def get_data_date(self):
-        if self._day_data != None:
-            return self._day_data.data_date.date().strftime('%Y-%m-%dT%H:%M:%S.%f%z')
-        else:
-            return None
+    # def get_data_date(self):
+    #     if self._day_data != None:
+    #         return self._day_data.data_date.date().strftime('%Y-%m-%dT%H:%M:%S.%f%z')
+    #     else:
+    #         return None
 
-    def get_data_datetime(self, hour):
+    def get_data_date(self, hour):
         if self._day_data != None:
             dt = self._day_data.data_date.date() + timedelta(hours=hour, minutes=30)
             return dt.strftime('%Y-%m-%dT%H:%M:%S.%f%z')
