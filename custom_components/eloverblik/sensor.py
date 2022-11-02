@@ -80,14 +80,17 @@ class EloverblikEnergy(Entity):
         """
         self._data.update_energy()        
 
-        self._data_date = self._data.get_data_date()
+        
 
         if self._sensor_type == 'hour':
             self._state = self._data.get_usage_hour(self._hour)
+            self._data_date = self._data.get_data_date() + timedelta(hours=self._hour, minutes=30)
         elif self._sensor_type == 'total':
             self._state = self._data.get_total_day()
+            self._data_date = self._data.get_data_date()
         elif self._sensor_type == 'year_total':
             self._state = self._data.get_total_year()
+            self._data_date = self._data.get_data_date()
         else:
             raise ValueError(f"Unexpected sensor_type: {self._sensor_type}.")
 
