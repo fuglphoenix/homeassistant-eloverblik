@@ -1,5 +1,5 @@
 {
-  "domain": "eloverblik",
+  "domain": "eloverblik_nbn_fork",
   "name": "Eloverblik nbn fork",
   "version": "0.2.1",
   "config_flow": true,
