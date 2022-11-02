@@ -102,7 +102,7 @@ class HassEloverblik:
 
     def get_data_datetime(self, hour):
         if self._day_data != None:
-            dt = self._day_data.data_date.date() + timedelta(hours=self._hour, minutes=30)
+            dt = self._day_data.data_date.date() + timedelta(hours=hour, minutes=30)
             return dt.strftime('%Y-%m-%dT%H:%M:%S.%f%z')
         else:
             return None

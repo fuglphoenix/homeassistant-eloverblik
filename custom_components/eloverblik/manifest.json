@@ -1,7 +1,7 @@
 {
   "domain": "eloverblik_nbn_fork",
   "name": "Eloverblik nbn fork",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/eloverblik",
   "requirements": [
